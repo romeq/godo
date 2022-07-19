@@ -1,20 +1,20 @@
 # godo
-simpel TUI todo application with TermUI
+simple TUI todo application with TermUI
 
-## installation
+## Installation
 ```sh
 go get 
 go build main.go
 ```
-the binary should be now created at ./main
+Binary should be now created at ./main
 
-## notes
-application does not include any proper error handling, 
+## Notes
+Application does not include any proper error handling, 
 and panics when one occurs. 
 
-it creates a folder to $HOME/.local/godo which contains the
-database used to save todos.
+it creates a folder to `$XDG_DATA_HOME/godo` (if exists) or `$HOME/.local/godo`. 
+This location contains the SQLite database used to save your todos.
 
-## known bugs
-database lock is not handled, and will result in panic of this application
+## Known bugs
+database lock is not handled, and will result in panic
 
